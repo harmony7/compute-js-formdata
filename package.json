@@ -1,0 +1,50 @@
+{
+  "name": "@h7/compute-js-formdata",
+  "description": "FormData parser and Request.prototype.formData() polyfill for JavaScript. A formal version is coming in the JS runtime, but this can be used in the interim.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harmony7/compute-js-formdata.git"
+  },
+  "author": {
+    "name": "Katsuyuki Omuro",
+    "email": "harmony7@pex2.jp"
+  },
+  "type": "module",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf build",
+    "coverage": "c8 npm test",
+    "test": "npm run test:unit",
+    "test:unit": "node --test --no-warnings=ExperimentalWarning --loader ts-node/esm test/unit/**/*.test.ts"
+  },
+  "dependencies": {
+    "@h7/byte-buffer": "^0.1.0",
+    "http-header-value": "^4.0.0"
+  },
+  "devDependencies": {
+    "@fastly/js-compute": "^3.7.3",
+    "c8": "^8.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "files": [
+    "build/**/*.js",
+    "build/**/*.js.map",
+    "build/**/*.d.ts",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "keywords": [
+    "forms",
+    "formdata",
+    "streams",
+    "fastly",
+    "compute"
+  ]
+}
