@@ -37,8 +37,7 @@
     "build/**/*.d.ts",
     "LICENSE",
     "README.md",
-    "CHANGELOG.md",
-    "SECURITY.md"
+    "CHANGELOG.md"
   ],
   "keywords": [
     "forms",
